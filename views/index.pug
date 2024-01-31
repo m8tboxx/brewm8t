@@ -6,4 +6,33 @@ html(lang="en")
         link(rel="stylesheet", href="/css/main.css")
         title Brewm8t V1
     body
-        h1 Hello brewm8t
+        include includes/navbar.pug
+        .wrapper
+            .bento-container 
+                .bentocard.bentocard-1
+                    h1 NB12 Helles Lager
+                .bentocard.bentocard-2 2
+                .bentocard.bentocard-3
+                    h1(style="padding-bottom: 30px") Maischetemperatur
+                    .temperature 57°C
+                .bentocard.bentocard-4
+                    h1(style="padding-bottom: 30px") Würzetemperatur
+                    .temperature 87°C
+                .bentocard.bentocard-5
+                    .bento-content.center 
+                        h2 Rührwerk
+                    .bento-content.center
+                        .toggle 
+                            input(type="checkbox" id="btn")
+                            label(for="btn")
+                                span.track
+                                    span.txt
+                                span.thumb |||
+                .bentocard.bentocard-6 6
+                .bentocard.bentocard-7 7
+                .bentocard.bentocard-8
+                    .bento-content.center
+                        h2 Status
+                    .bento-content.center
+                        .progress-box
+                            .progress
