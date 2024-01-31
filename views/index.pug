@@ -5,6 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/main.css")
         title Brewm8t V1
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js") 
     body
         include includes/navbar.pug
         .wrapper
@@ -13,10 +14,10 @@ html(lang="en")
                     h1 NB12 Helles Lager
                 .bentocard.bentocard-2 2
                 .bentocard.bentocard-3
-                    h1(style="padding-bottom: 30px") Maischetemperatur
+                    h1(style="padding-bottom: 30px") Maische
                     .temperature 57°C
                 .bentocard.bentocard-4
-                    h1(style="padding-bottom: 30px") Würzetemperatur
+                    h1(style="padding-bottom: 30px") Würze
                     .temperature 87°C
                 .bentocard.bentocard-5
                     .bento-content.center 
@@ -28,11 +29,16 @@ html(lang="en")
                                 span.track
                                     span.txt
                                 span.thumb |||
-                .bentocard.bentocard-6 6
-                .bentocard.bentocard-7 7
-                .bentocard.bentocard-8
+                .bentocard.bentocard-6
+                    .bento-content.center 
+                        h3 Restzeit 
+                    .bento-content.center 
+                        h1#countdown 00:45:23
+                .bentocard.bentocard-7
                     .bento-content.center
                         h2 Status
                     .bento-content.center
                         .progress-box
                             .progress
+        script(src="/js/countdown.js") 
+                        
