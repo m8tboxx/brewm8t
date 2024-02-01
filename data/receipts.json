@@ -1,0 +1,27 @@
+[
+    {
+        "name": "NB12 Helles Lager", 
+        "mashTemp": "57",
+        "cookingTime": "90",
+        "mashingStages": [
+            {
+                "temperature": "62",
+                "time": "20"
+            },
+            {
+                "temperature": "65",
+                "time": "40"
+            },
+            {
+                "temperature": "72",
+                "time": "15"
+            },
+            {
+                "temperature": "78",
+                "time": "10"
+            }
+        ],
+        "hopStages": ["70", "15", "5"]
+    }
+]
+

@@ -64,7 +64,7 @@ header:hover::before {
 }
 
 .logo {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: 600;
@@ -176,9 +176,9 @@ header:hover::before {
 
 .progress {
     height: 100%;
-    width: 30%;
-    background: rgb(0,169,112);
-    background: linear-gradient(180deg, rgba(0,169,112,1) 0%, rgba(255,255,255,0.4) 50%, rgba(0,169,127,1) 100%);
+    width: 100%;
+    background: rgb(55,53,68);
+    background: linear-gradient(90deg, rgba(55,53,68,1) 0%, rgba(0,169,127,1) 100%);
     /*background-color: var(--primary-color);*/
     transition: 0.5s;
 }
@@ -204,7 +204,7 @@ h1 {
     display: none;
   }
 
-  label[for=btn] {
+  label[for=agitator-switch] {
     position: absolute;
     width: calc(var(--sz) * 4);
     height: calc(var(--sz) * 2);
@@ -214,13 +214,13 @@ h1 {
     box-shadow: 0 0 calc(var(--sz) / 50) calc(var(--sz) / 50) #0002;
   }	
   
-  #btn:checked + label[for=btn] {
+  #agitator-switch:checked + label[for=agitator-switch] {
     box-shadow: 
       0 calc(var(--sz) / 50) calc(var(--sz) / 5) #fff9, 
       0 0 calc(var(--sz) / 50) calc(var(--sz) / 50) #0002;
   }
   
-  label[for=btn]:after {
+  label[for=agitator-switch]:after {
     content: "";
     position: absolute;
     width: calc(100% - calc(calc(var(--sz) / 5) * 12));
@@ -233,7 +233,7 @@ h1 {
     animation: move-shadow 3s ease 0s 1;
   }
   
-  #btn:checked + label[for=btn]:after {
+  #btn:checked + label[for=agitator-switch]:after {
     opacity: 1;
     width: calc(100% - calc(calc(var(--sz) / 5) * 4));
   }
@@ -266,7 +266,7 @@ h1 {
     box-shadow: 0 calc(var(--sz) / -10) calc(var(--sz) / 10) 0 #0005 inset, 0 calc(var(--sz) / 10) calc(var(--sz) / 10) 0 #0005 inset;
   }
   
-  #btn:checked + label .track:before {
+  #agitator-switch:checked + label .track:before {
     left: 0%;
   }
   
@@ -299,7 +299,7 @@ h1 {
     animation: move-thumb 3s ease 0s 1;
   }
   
-  #btn:checked + label .thumb {
+  #agitator-switch:checked + label .thumb {
     left: calc(calc(100% - calc(calc(var(--sz) * 2) - calc(var(--sz) / 3))) - calc(calc( var(--sz) / 10) + calc(var(--sz) / 15)));
     color: var(--on);
     background: 

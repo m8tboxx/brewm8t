@@ -4,10 +4,12 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/modal.css")
         title Brewm8t V1
         script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js") 
     body
         include includes/navbar.pug
+        include includes/modal.pug
         .wrapper
             .bento-container 
                 .bentocard.bentocard-1
@@ -24,8 +26,8 @@ html(lang="en")
                         h2 Rührwerk
                     .bento-content.center
                         .toggle 
-                            input(type="checkbox" id="btn")
-                            label(for="btn")
+                            input(type="checkbox" id="agitator-switch")
+                            label(for="agitator-switch")
                                 span.track
                                     span.txt
                                 span.thumb |||
@@ -33,12 +35,16 @@ html(lang="en")
                     .bento-content.center 
                         h3 Restzeit 
                     .bento-content.center 
-                        h1#countdown 00:45:23
+                        h1#countdown
                 .bentocard.bentocard-7
                     .bento-content.center
                         h2 Status
                     .bento-content.center
                         .progress-box
                             .progress
-        script(src="/js/countdown.js") 
+        script(src="/js/countdown.js")
+        script(src="/js/agitator.js")
+        script(src="/js/modal.js")
+        script(src="/js/brewm8tModals.js") 
+        script Modal.initElements();
                         
