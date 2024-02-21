@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/modal.css")
+        title brewm8t
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js") 
+    body
+        include ../includes/navbar.pug
+
+        block content 
+
+        script(src="/js/socketFunctions.js")
+        script(src="/js/modal.js")
+        script(src="/js/audio.js") 
+        script(src="/js/brewm8tModals.js") 
+        script Modal.initElements();

@@ -133,7 +133,7 @@ header:hover::before {
 }
 
 .bentocard-1 {
-    grid-column: 1/5;
+    grid-column: 2/5;
 }
 
 .bentocard-2 {
@@ -166,6 +166,11 @@ header:hover::before {
   grid-row: 4/5;
 }
 
+.bentocard-8 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
 .progress-box {
     width: 100%;
     height: 2rem;
@@ -185,6 +190,7 @@ header:hover::before {
 
 .temperature {
     font-size: 5vw;
+    padding-bottom: 2rem;
 }
 
 h1 {
@@ -270,12 +276,6 @@ h1 {
     left: 0%;
   }
   
-  
-  
-  
-  
-  
-  
   .thumb {
     position: absolute;
     width: calc(calc(var(--sz) * 2) - calc(var(--sz) / 3));
@@ -323,10 +323,6 @@ h1 {
     border-radius: var(--sz);
     border: calc(var(--sz) / 50) solid #ddd;
   }
-  
-  
-  
-  
   
   .txt:before, 
   .txt:after {
@@ -387,4 +383,85 @@ h1 {
       opacity: 1;
       width: calc(100% - calc(calc(var(--sz) / 5) * 4));
     }
+  }
+
+  /*----------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Power switch                                                                                                                           */
+  /*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  .power-switch-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
+  }
+
+  .power-switch-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+
+  .power-switch-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 6px solid #838996;
+    background-color: #282828;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  .power-switch-circle span {
+    color: #e5e4e2;
+    font-size: small;
+  }
+
+  .power-switch-circle .power-switch-led {
+    width: 1em;
+    height: 0.2em;
+    background-color: #BBBBBB;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+
+  .engine-text {
+    margin-top: 0.75em;
+    font-weight: 500;
+  }
+  
+  .start-text, .stop-text {
+    font-weight: 600;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+.power-switch-container input:checked ~ .power-switch-circle .power-switch-led {
+  background-color: #FDDA16;
+  box-shadow: #FDDA16 0px 1px 0px, #FDDA16 0px 0px 8px;
+}
+
+.power-switch-container input:checked ~ .power-switch-circle {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+   rgba(14, 30, 37, 0.32) 0px 2px 16px 0px,
+   inset 3px 3px 8px 1px #485871,
+   inset -3px -3px 8px 1px #485871;
+}
+
+  /*----------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Receipts site                                                                                                                           */
+  /*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  .container {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 71px;
+    align-items: center;
   }

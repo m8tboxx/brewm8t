@@ -1,50 +1,47 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/css/main.css")
-        link(rel="stylesheet", href="/css/modal.css")
-        title Brewm8t V1
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js") 
-    body
-        include includes/navbar.pug
-        include includes/modal.pug
-        .wrapper
-            .bento-container 
-                .bentocard.bentocard-1
-                    h1 NB12 Helles Lager
-                .bentocard.bentocard-2 2
-                .bentocard.bentocard-3
-                    h1(style="padding-bottom: 30px") Maische
-                    .temperature 57°C
-                .bentocard.bentocard-4
-                    h1(style="padding-bottom: 30px") Würze
-                    .temperature 87°C
-                .bentocard.bentocard-5
-                    .bento-content.center 
-                        h2 Rührwerk
-                    .bento-content.center
-                        .toggle 
-                            input(type="checkbox" id="agitator-switch")
-                            label(for="agitator-switch")
-                                span.track
-                                    span.txt
-                                span.thumb |||
-                .bentocard.bentocard-6
-                    .bento-content.center 
-                        h3 Restzeit 
-                    .bento-content.center 
-                        h1#countdown
-                .bentocard.bentocard-7
-                    .bento-content.center
-                        h2 Status
-                    .bento-content.center
-                        .progress-box
-                            .progress
-        script(src="/js/countdown.js")
-        script(src="/js/agitator.js")
-        script(src="/js/modal.js")
-        script(src="/js/brewm8tModals.js") 
-        script Modal.initElements();
-                        
+extends layouts/main-layout.pug
+
+block content
+    .wrapper
+        .bento-container 
+            .bentocard.bentocard-1
+                h1 NB12 Helles Lager
+            .bentocard.bentocard-2 2
+            .bentocard.bentocard-3
+                h1(style="padding-bottom: 30px") Maische
+                .temperature#mash-temperature 57°C
+                h2#target-mash-temp Ziel: 62 °C
+            .bentocard.bentocard-4
+                h1(style="padding-bottom: 30px") Würze
+                .temperature 87°C
+                h2#target-wort-temp Ziel: 97°C
+            .bentocard.bentocard-5
+                .bento-content.center 
+                    h2 Rührwerk
+                .bento-content.center
+                    .toggle 
+                        input(type="checkbox" id="agitator-switch")
+                        label(for="agitator-switch")
+                            span.track
+                                span.txt
+                            span.thumb |||
+            .bentocard.bentocard-6
+                .bento-content.center 
+                    h3 Restzeit 
+                .bento-content.center 
+                    h1#countdown
+            .bentocard.bentocard-7
+                .bento-content.center
+                    h2 Status
+                .bento-content.center
+                    .progress-box
+                        .progress#brew-status
+            .bentocard.bentocard-8
+                    .bento-content-center
+                        label.power-switch-container
+                            input(type="checkbox" id="power-switch" class="power-switch")
+                            .power-switch-circle
+                                .power-switch-led 
+                                span.engine-text BREWING 
+                                span.start-text START 
+                                span.stop-text STOP
+                    

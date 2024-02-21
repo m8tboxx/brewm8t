@@ -3,3 +3,9 @@ exports.getIndex = (req, res, next) => {
         
     });
 }
+
+exports.getReceipts = (req, res, next) => {
+    res.render('receipts', {
+        
+    });
+}
